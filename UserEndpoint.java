@@ -3,16 +3,13 @@ package com.softserve.taf.services.placeholder.endpoints;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.*;
 import com.softserve.taf.models.enums.HttpStatus;
 import com.softserve.taf.models.placeholder.user.UserDto;
 import com.softserve.taf.services.common.AbstractWebEndpoint;
 
 /**
  * This class is an extension of AbstractWebEndpoint. It handles operations for User endpoints.
- *
- * @author ChatGPT & Comp.
  */
 public class UserEndpoint extends AbstractWebEndpoint {
 
@@ -116,7 +113,7 @@ public class UserEndpoint extends AbstractWebEndpoint {
     /**
      * This method is for getting all users.
      *
-     * @return (List<UserDto>) - Represents all the retrieved users.
+     * @return (List of UserDto elements) - Represents all the retrieved users.
      */
     public List<UserDto> getAll() {
         return List.of(getAll(HttpStatus.OK).extract().as(UserDto[].class));

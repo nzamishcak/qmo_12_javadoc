@@ -11,8 +11,6 @@ import com.softserve.taf.services.common.AbstractWebEndpoint;
 
 /**
  * This class is an extension of AbstractWebEndpoint. It handles operations for Comment endpoints.
- *
- * @author ChatGPT & Comp.
  */
 public class CommentEndpoint extends AbstractWebEndpoint {
 
@@ -116,7 +114,7 @@ public class CommentEndpoint extends AbstractWebEndpoint {
     /**
      * This method is for getting all comments.
      *
-     * @return (List<CommentDto>) - Represents all the retrieved comments.
+     * @return (List of CommentDto objects) - Represents all the retrieved comments.
      */
     public List<CommentDto> getAll() {
         return List.of(getAll(HttpStatus.OK).extract().as(CommentDto[].class));
